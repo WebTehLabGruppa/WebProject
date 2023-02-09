@@ -735,6 +735,11 @@ pre {
   height: 400px;
 }
 
+#map2 {
+  width:  100%;
+  height: 400px;
+}
+
 /* Buttons */
 .btn {
   font-family: "PT Mono", sans-serif;
