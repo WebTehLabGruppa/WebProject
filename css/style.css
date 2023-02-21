@@ -31,6 +31,14 @@ body {
   color: #ffffff;
   background: #1d2dfd;
 }
+.btn {
+    position: relative;
+    right: 10;
+    left: 10;
+    top: 5;
+    bottom: 10;
+}
+
 
 ::selection {
   color: #ffffff;
