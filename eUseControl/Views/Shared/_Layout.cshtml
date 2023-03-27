@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Optimization;
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,30 +16,26 @@ using System.Web.Optimization;
     @System.Web.Optimization.Styles.Render("~/bundles/mainstyles/css")
     @System.Web.Optimization.Styles.Render("~/bundles/responsive/css")
 
+
+
 </head>
 <body>
-    @Html.Partial("_Header")
-    @Html.Partial("_Menu")
-    @Html.Partial("_Home")
-    @Html.Partial("_LanguageChoose")
-    @Html.Partial("_CoursesList")
-    @Html.Partial("_InstructorsList")
-    @Html.Partial("_RegisterForm")
-    @Html.Partial("_UpcomingEvents")
-    @Html.Partial("_OurBlog")
-    @Html.Partial("_Footer")
-    @RenderBody()
+    <div class="super_container">
+        @Html.Partial("_Header")
+        @Html.Partial("_Menu")
+        @RenderBody()
+
+    </div>
+
+        @System.Web.Optimization.Scripts.Render("~/bundles/jquery/js")
+        @System.Web.Optimization.Scripts.Render("~/bundles/popper/js")
+        @System.Web.Optimization.Scripts.Render("~/bundles/bootstrap/js")
+        @System.Web.Optimization.Scripts.Render("~/bundles/owlcarousel/js")
+        @System.Web.Optimization.Scripts.Render("~/bundles/easing/js")
+        @System.Web.Optimization.Scripts.Render("~/bundles/custom/js")
 
 
-    @System.Web.Optimization.Scripts.Render("~/bundles/jquery/js")
-    @System.Web.Optimization.Scripts.Render("~/bundles/popper/js")
-    @System.Web.Optimization.Scripts.Render("~/bundles/bootstrap/js")
-    @System.Web.Optimization.Scripts.Render("~/bundles/owlcarousel/js")
-    @System.Web.Optimization.Scripts.Render("~/bundles/easing/js")
-    @System.Web.Optimization.Scripts.Render("~/bundles/custom/js")
 
-
-    
 
 </body>
 </html>

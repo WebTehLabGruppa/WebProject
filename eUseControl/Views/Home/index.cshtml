@@ -1,8 +1,22 @@
 ﻿
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "index";
 }
 
-<h2>index</h2>
+<html>
 
+<body>
+    <div class="super_container">
+        @Html.Partial("_Home")
+        @Html.Partial("_LanguageChoose")
+        @Html.Partial("_CoursesList")
+        @Html.Partial("_InstructorsList")
+        @Html.Partial("_RegisterForm")
+        @Html.Partial("_UpcomingEvents")
+        @Html.Partial("_OurBlog")
+        @Html.Partial("_Footer")
 
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "courses";
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @System.Web.Optimization.Styles.Render("~/bundles/courses/css")
+    @System.Web.Optimization.Styles.Render("~/bundles/coursesresponsive/css")
+
+</head>
+<body>
+    <div class="super_container">
+        <div>
+
+        </div>
+        @Html.Partial("_HomeCourses")
+        @Html.Partial("_LanguageChoose")
+        @Html.Partial("_CoursesListExtended")
+        @Html.Partial("_InstructorsList")
+        @Html.Partial("_Footer")
+
+    </div>
+
+    @System.Web.Optimization.Scripts.Render("~/bundles/courses/js")
+
+</body>
+</html>
