@@ -52,6 +52,24 @@ namespace eUseControl.App_Start
             bundles.Add(new StyleBundle("~/bundles/courseresponsive/css").Include(
                  "~/Vendor/course_responsive.css", new CssRewriteUrlTransform()));
 
+            bundles.Add(new StyleBundle("~/bundles/blogsingle/css").Include(
+                 "~/Vendor/blog_single.css", new CssRewriteUrlTransform()));
+
+            bundles.Add(new StyleBundle("~/bundles/blogsingleresponsive/css").Include(
+                 "~/Vendor/blog_single_responsive.css", new CssRewriteUrlTransform()));
+
+            bundles.Add(new StyleBundle("~/bundles/contact/css").Include(
+                 "~/Vendor/contact.css", new CssRewriteUrlTransform()));
+
+            bundles.Add(new StyleBundle("~/bundles/contactresponsive/css").Include(
+                 "~/Vendor/contact_responsive.css", new CssRewriteUrlTransform()));
+
+            bundles.Add(new StyleBundle("~/bundles/contactresponsive/css").Include(
+                 "~/Vendor/instructors.css", new CssRewriteUrlTransform()));
+
+            bundles.Add(new StyleBundle("~/bundles/contactresponsive/css").Include(
+                 "~/Vendor/instructors_responsive.css", new CssRewriteUrlTransform()));
+
 
 
 
@@ -75,6 +93,11 @@ namespace eUseControl.App_Start
 
             bundles.Add(new Bundle("~/bundles/course/js").Include("~/Vendor/course.js"));
 
+            bundles.Add(new Bundle("~/bundles/blogsingle/js").Include("~/Vendor/blog_single.js"));
+
+            bundles.Add(new Bundle("~/bundles/contact/js").Include("~/Vendor/contact.js"));
+
+            bundles.Add(new Bundle("~/bundles/contact/js").Include("~/Vendor/instructors.js"));
 
 
 

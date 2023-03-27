@@ -7,7 +7,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    @System.Web.Optimization.Styles.Render("~/bundles/blogsingle/css")
+    @System.Web.Optimization.Styles.Render("~/bundles/blogsingleresponsive/css")
 </head>
 <body>
     <div class="super_container">
@@ -35,5 +36,7 @@
         @Html.Partial("_BlogContent")
         @Html.Partial("_Footer")
     </div>
+
+    @System.Web.Optimization.Scripts.Render("~/bundles/blogsingle/js")
 </body>
 </html>
