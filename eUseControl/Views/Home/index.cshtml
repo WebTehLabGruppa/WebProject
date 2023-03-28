@@ -4,19 +4,24 @@
     ViewBag.Title = "index";
 }
 
+@model eUseControl.Models.UserData
+
 <html>
+
 
 <body>
     <div class="super_container">
-        @Html.Partial("_Home")
-        @Html.Partial("_LanguageChoose")
-        @Html.Partial("_CoursesList")
-        @Html.Partial("_InstructorsList")
-        @Html.Partial("_RegisterForm")
-        @Html.Partial("_UpcomingEvents")
-        @Html.Partial("_OurBlog")
-        @Html.Partial("_Footer")
+        
+            @Html.Partial("_Home")
+            @Html.Partial("_LanguageChoose")
+            @Html.Partial("_CoursesList")
+            @Html.Partial("_InstructorsList")
+            @Html.Partial("_RegisterForm")
+            @Html.Partial("_UpcomingEvents")
+            @Html.Partial("_OurBlog")
+            @Html.Partial("_Footer")
 
-    </div>
+        </div>
+ 
 </body>
 </html>
