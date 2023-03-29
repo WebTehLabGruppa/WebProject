@@ -4,23 +4,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUseControl.Web", "eUseControl\eUseControl.Web.csproj", "{394C89D0-673F-4E57-BEAA-BE08BF2FBC44}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6F8D9F84-358E-46A5-977D-2D8BCCD7A82B} = {6F8D9F84-358E-46A5-977D-2D8BCCD7A82B}
-		{EC5E4FF5-F82F-4ACA-BAFA-4D92064E9B26} = {EC5E4FF5-F82F-4ACA-BAFA-4D92064E9B26}
-	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUseControl.BusinessLogic", "eUseControl.BusinessLogic\eUseControl.BusinessLogic.csproj", "{EC5E4FF5-F82F-4ACA-BAFA-4D92064E9B26}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6F8D9F84-358E-46A5-977D-2D8BCCD7A82B} = {6F8D9F84-358E-46A5-977D-2D8BCCD7A82B}
-		{73537A7E-8AFD-45D7-B0CE-CCB0BB90F90E} = {73537A7E-8AFD-45D7-B0CE-CCB0BB90F90E}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eUseControl.BusinessLogic", "eUseControl.BusinessLogic\eUseControl.BusinessLogic.csproj", "{EC5E4FF5-F82F-4ACA-BAFA-4D92064E9B26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUseControl.Domain", "eUseControl.Domain\eUseControl.Domain.csproj", "{6F8D9F84-358E-46A5-977D-2D8BCCD7A82B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{73537A7E-8AFD-45D7-B0CE-CCB0BB90F90E} = {73537A7E-8AFD-45D7-B0CE-CCB0BB90F90E}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eUseControl.Domain", "eUseControl.Domain\eUseControl.Domain.csproj", "{6F8D9F84-358E-46A5-977D-2D8BCCD7A82B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUseControl.Helpers", "eUseControl.Helpers\eUseControl.Helpers.csproj", "{73537A7E-8AFD-45D7-B0CE-CCB0BB90F90E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eUseControl.Helpers", "eUseControl.Helpers\eUseControl.Helpers.csproj", "{73537A7E-8AFD-45D7-B0CE-CCB0BB90F90E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

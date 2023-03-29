@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eUseControl.BusinessLogic.Interfaces
 {
-    internal interface ISession
+    public interface ISession
     {
 
     }
