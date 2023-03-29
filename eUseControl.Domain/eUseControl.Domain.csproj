@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Enums\" />
+    <ProjectReference Include="..\eUseControl.Helpers\eUseControl.Helpers.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eUseControl.Helpers\eUseControl.Helpers.csproj" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 
 </Project>
