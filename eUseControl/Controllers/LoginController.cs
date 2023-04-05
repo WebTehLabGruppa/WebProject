@@ -44,7 +44,7 @@ namespace eUseControl.Controllers
                 if (userLogin.Status)
                 {
                     //add cookie
-                    return RedirectToAction("index", "Home");
+                    return RedirectToAction("Index", "Home");
 
                 }
                 else
