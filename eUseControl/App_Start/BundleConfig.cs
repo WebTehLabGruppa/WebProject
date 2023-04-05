@@ -64,11 +64,14 @@ namespace eUseControl.App_Start
             bundles.Add(new StyleBundle("~/bundles/contactresponsive/css").Include(
                  "~/Vendor/contact_responsive.css", new CssRewriteUrlTransform()));
 
-            bundles.Add(new StyleBundle("~/bundles/contactresponsive/css").Include(
+            bundles.Add(new StyleBundle("~/bundles/instructors/css").Include(
                  "~/Vendor/instructors.css", new CssRewriteUrlTransform()));
 
-            bundles.Add(new StyleBundle("~/bundles/contactresponsive/css").Include(
+            bundles.Add(new StyleBundle("~/bundles/instructorsresponsive/css").Include(
                  "~/Vendor/instructors_responsive.css", new CssRewriteUrlTransform()));
+
+            bundles.Add(new StyleBundle("~/bundles/loginform/css").Include(
+                 "~/Vendor/loginform.css", new CssRewriteUrlTransform()));
 
 
 

@@ -274,6 +274,7 @@
     <Content Include="Vendor\instructors.js" />
     <Content Include="Vendor\instructors_responsive.css" />
     <Content Include="Vendor\jquery-3.2.1.min.js" />
+    <Content Include="Vendor\loginform.css" />
     <Content Include="Vendor\parallax-js-master\parallax.min.js" />
     <Content Include="Vendor\progressbar\progressbar.min.js" />
     <Content Include="Vendor\regular.css" />
@@ -423,6 +424,8 @@
     <Content Include="Vendor\font-awesome-4.7.0\scss\_variables.scss" />
     <Content Include="Views\Shared\_HomeCourses.cshtml" />
     <Content Include="Views\Shared\_HomeInstructors.cshtml" />
+    <Content Include="Views\Login\index.cshtml" />
+    <Content Include="Views\Shared\_LoginForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -432,7 +435,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eUseControl.BusinessLogic\eUseControl.BusinessLogic.csproj">
