@@ -238,6 +238,7 @@
     <Content Include="images\review_1.jpg" />
     <Content Include="images\right.png" />
     <Content Include="images\schedule.svg" />
+    <Content Include="images\signin.png" />
     <Content Include="images\Swedish.svg" />
     <Content Include="images\Ukrainian.svg" />
     <Content Include="images\video.jpg" />
@@ -426,6 +427,8 @@
     <Content Include="Views\Shared\_HomeInstructors.cshtml" />
     <Content Include="Views\Login\index.cshtml" />
     <Content Include="Views\Shared\_LoginForm.cshtml" />
+    <Content Include="Views\Login\Registration.cshtml" />
+    <Content Include="Views\Shared\_LRegForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

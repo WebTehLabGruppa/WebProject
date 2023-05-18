@@ -29,6 +29,12 @@ namespace eUseControl.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         public ActionResult Index(UserLogin login)
         {
             if (ModelState.IsValid)
