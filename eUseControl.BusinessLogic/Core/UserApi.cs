@@ -12,7 +12,35 @@ namespace eUseControl.BusinessLogic.Core
     {
         public RequestResponceAction UserLoginAction(ULoginData data)
         {
-            return new RequestResponceAction();
+            UDbTable user;
+
+            using (var db = new UserContext())
+            {
+                user = new UDbTable
+                {
+                    Username = "Vladimir",
+                    Password = "wasd234566",
+                    LastLogin = DateTime.Now,
+                    Level = Domain.Entities.Enums.URole.ADMINISTRATOR,
+                    Email = "stentychanell@gmail.com"
+                };
+                db.Users.Add(user); db.SaveChanges();   
+            }
+
+            using (var db = new UserContext())
+            {
+                 user = db.Users.FirstOrDefault(u => u.Username == data.Credential);
+                 
+            }
+            using (var db = new UserContext())
+            {
+                user = (from u in db.Users where u.Username == data.Credential select u).FirstOrDefault();
+            }
+            if(user != null)
+            {
+                
+            }
+                return new RequestResponceAction();
         }
     }
 }

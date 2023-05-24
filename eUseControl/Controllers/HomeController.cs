@@ -12,8 +12,20 @@ namespace eUseControl.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            UserData u = new UserData();
+            u.Username = "customer";
+            u.Products = new List<string> { "Product #1", "Product #2", "Product #3", "Product #4" };
 
            return View();
+        }
+
+        public ActionResult IndexAdmin()
+        {
+            UserData u = new UserData();
+            u.Username = "admin";
+            u.Products = new List<string> { "Product #1", "Product #2", "Product #3", "Product #4" };
+
+            return View();
         }
 
         public ActionResult CoursesPage()

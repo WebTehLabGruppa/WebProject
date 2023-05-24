@@ -8,8 +8,11 @@ namespace eUseControl.Domain.Entities.Enums
 {
     public enum URole
     {
-        UNAUTHORIZED,
+        GUEST,
         USER,
-        ADMINISTRATOR
+        ADMINISTRATOR,
+        TEACHER,
+        STUDENT
+
     }
 }

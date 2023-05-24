@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using eUseControl.Models;
+using System.Web.UI.WebControls;
 
 namespace eUseControl.Controllers
 {
@@ -22,20 +23,32 @@ namespace eUseControl.Controllers
         }
 
         // GET: Login
+
+        [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("SignIn", "Login");
         }
+
+        [HttpGet]
+        public ActionResult SignIn()
+        {
+            UserData u = new UserData();
+            ULoginData data = new ULoginData
+            {
+                Credential = "Login123",
+                Password = "wasd2345600",
+                LoginIp = Request.UserHostAddress,
+                LoginDate = DateTime.Now
+            };
+            var userLogin = _session.UserLogin(data);
+            return View(u); 
+        }
+
+
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Index(UserLogin login)
+        public ActionResult SignIn(UserLogin login)
         {
             if (ModelState.IsValid)
             {

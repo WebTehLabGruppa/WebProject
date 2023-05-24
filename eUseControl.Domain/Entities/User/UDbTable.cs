@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
-class UDbTable
+public class UDbTable
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
