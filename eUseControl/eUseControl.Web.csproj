@@ -268,7 +268,6 @@
     <Content Include="Vendor\contact.js" />
     <Content Include="Vendor\contact_responsive.css" />
     <Content Include="Vendor\course.css" />
-    <Content Include="Vendor\course.js" />
     <Content Include="Vendor\courses.css" />
     <Content Include="Vendor\courses.js" />
     <Content Include="Vendor\courses_responsive.css" />
@@ -315,7 +314,6 @@
     <Content Include="Vendor\OwlCarousel2-2.2.1\owl.carousel.js" />
     <Content Include="Vendor\OwlCarousel2-2.2.1\owl.theme.default.css" />
     <Content Include="Vendor\OwlCarousel2-2.2.1\owl.video.play.png" />
-    <Content Include="Vendor\popper.js" />
     <Content Include="Vendor\responsive.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -392,9 +390,9 @@
     <Content Include="Views\Shared\_TopTeachers.cshtml" />
     <Content Include="Views\Home\contact.cshtml" />
     <Content Include="Views\Shared\_ContactMap.cshtml" />
-    <Content Include="Views\Home\coursesingle.cshtml" />
+    <Content Include="Views\Home\courseenglish.cshtml" />
     <Content Include="Views\Shared\_Intro.cshtml" />
-    <Content Include="Views\Shared\_CourseSing.cshtml" />
+    <Content Include="Views\Shared\_CourseEng.cshtml" />
     <Content Include="Views\Home\blogsingle.cshtml" />
     <Content Include="Views\Shared\_BlogContent.cshtml" />
     <Content Include="Vendor\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />

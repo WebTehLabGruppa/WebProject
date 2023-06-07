@@ -33,11 +33,11 @@ namespace eUseControl.Controllers
             return View();
         }
 
-        public ActionResult CourseSingle()
+        public ActionResult CourseEnglish()
         {
             return View();
         }
-
+        
         public ActionResult Blog()
         {
             return View();

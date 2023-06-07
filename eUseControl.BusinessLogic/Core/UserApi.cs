@@ -1,46 +1,46 @@
-﻿using eUseControl.Domain.Entities.User;
-using eUseControl.Domain.Entities.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿    using eUseControl.Domain.Entities.User;
+    using eUseControl.Domain.Entities.Responses;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
 
-namespace eUseControl.BusinessLogic.Core
-{
-    public class UserApi
+    namespace eUseControl.BusinessLogic.Core
     {
-        public RequestResponceAction UserLoginAction(ULoginData data)
+        public class UserApi
         {
-            UDbTable user;
-
-            using (var db = new UserContext())
+            public RequestResponceAction UserLoginAction(ULoginData data)
             {
-                user = new UDbTable
+                UDbTable user;
+
+                using (var db = new UserContext())
                 {
-                    Username = "Vladimir",
-                    Password = "wasd234566",
-                    LastLogin = DateTime.Now,
-                    Level = Domain.Entities.Enums.URole.ADMINISTRATOR,
-                    Email = "stentychanell@gmail.com"
-                };
-                db.Users.Add(user); db.SaveChanges();   
-            }
+                    user = new UDbTable
+                    {
+                        Username = "Vladimir",
+                        Password = "wasd234566",
+                        LastLogin = DateTime.Now,
+                        Level = Domain.Entities.Enums.URole.ADMINISTRATOR,
+                        Email = "stentychanell@gmail.com"
+                    };
+                    db.Users.Add(user); db.SaveChanges();   
+                }
 
-            using (var db = new UserContext())
-            {
-                 user = db.Users.FirstOrDefault(u => u.Username == data.Credential);
+                using (var db = new UserContext())
+                {
+                     user = db.Users.FirstOrDefault(u => u.Username == data.Credential);
                  
-            }
-            using (var db = new UserContext())
-            {
-                user = (from u in db.Users where u.Username == data.Credential select u).FirstOrDefault();
-            }
-            if(user != null)
-            {
+                }
+                using (var db = new UserContext())
+                {
+                    user = (from u in db.Users where u.Username == data.Credential select u).FirstOrDefault();
+                }
+                if(user != null)
+                {
                 
+                }
+                    return new RequestResponceAction();
             }
-                return new RequestResponceAction();
         }
     }
-}

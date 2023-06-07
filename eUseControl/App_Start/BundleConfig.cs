@@ -86,7 +86,7 @@ namespace eUseControl.App_Start
 
             bundles.Add(new Bundle("~/bundles/easing/js").Include("~/Vendor/easing.js"));
 
-            bundles.Add(new Bundle("~/bundles/popper/js").Include("~/Vendor/popper.js"));
+            bundles.Add(new Bundle("~/bundles/popper/js").Include("~/Vendor/bootstrap4/popper.js"));
 
             bundles.Add(new Bundle("~/bundles/parallax/js").Include("~/Vendor/parallax-js-master/parallax.min.js"));
 
@@ -101,6 +101,8 @@ namespace eUseControl.App_Start
             bundles.Add(new Bundle("~/bundles/contact/js").Include("~/Vendor/contact.js"));
 
             bundles.Add(new Bundle("~/bundles/contact/js").Include("~/Vendor/instructors.js"));
+
+            bundles.Add(new Bundle("~/bundles/progressbar/js").Include("~/Vendor/progressbar/progressbar.min.js"));
 
 
 
