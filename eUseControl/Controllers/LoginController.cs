@@ -51,7 +51,7 @@ namespace eUseControl.Web.Controllers
         }
 
         [HttpPost]
-            [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
             public ActionResult SignIn(UserLogin login)
             {
                 if (ModelState.IsValid)
