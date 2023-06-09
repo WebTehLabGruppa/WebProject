@@ -1,6 +1,6 @@
 ﻿<!-- Header -->
-
-    <header class="header">
+@model eUseControl.Web.Models.UserData
+    
 
         <!-- Top Bar -->
         <div class="top_bar">
@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-                                <div class="top_bar_phone"><span class="top_bar_title">phone:</span>+44 300 303 0266</div>
+                                <div class="top_bar_phone"><span class="top_bar_title">user:</span>@Html.DisplayFor(u => u.Username) </div>
                                 <div class="top_bar_right ml-auto">
 
                                     <!-- Language -->
@@ -93,5 +93,4 @@
             </div>
         </div>
 
-    </header>
     

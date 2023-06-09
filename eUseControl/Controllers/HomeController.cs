@@ -1,22 +1,33 @@
-﻿using eUseControl.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using eUseControl.Web.Controllers;
+using eUseControl.Web.Extension;
+using eUseControl.Web.Models;
 
-namespace eUseControl.Controllers
+namespace eUseControl.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         // GET: Home
         public ActionResult Index()
         {
-            UserData u = new UserData();
-            u.Username = "customer";
-            u.Products = new List<string> { "Product #1", "Product #2", "Product #3", "Product #4" };
+            SessionStatus();
 
-           return View();
+           /* if ((string)System.Web.HttpContext.Current.Session["LoginStatus"] != "login")
+            {
+                return RedirectToAction("Index", "Login");
+            } */
+            var user = "guest"; /*System.Web.HttpContext.Current.GetMySessionObject();*/
+            UserData u = new UserData
+            {
+                Username = user,
+                Products = new List<string> { "Product #1", "Product #2", "Product #3", "Product #4" }
+            };
+
+            return View(u);
         }
 
         public ActionResult IndexAdmin()

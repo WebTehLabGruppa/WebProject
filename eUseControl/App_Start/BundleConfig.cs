@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using System.Web.Optimization;
+using System.Web.Routing;
 
-namespace eUseControl.App_Start
+namespace eUseControl.Web
 {
     public static class BundleConfig
     {
@@ -78,7 +80,7 @@ namespace eUseControl.App_Start
 
             bundles.Add(new Bundle("~/bundles/bootstrap/js").Include("~/Scripts/bootstrap.min.js"));
 
-            bundles.Add(new Bundle("~/bundles/jquery/js").Include("~/Scripts/jquery-3.6.4.min.js"));
+            bundles.Add(new Bundle("~/bundles/jquery/js").Include("~/Scripts/jquery-3.7.0.min.js"));
 
             bundles.Add(new Bundle("~/bundles/owlcarousel/js").Include("~/Scripts/owl.carousel.js"));
 
@@ -108,6 +110,16 @@ namespace eUseControl.App_Start
 
 
 
+        }
+        public class Global: HttpApplication
+        {
+            void Application_Start(object sender, EventArgs e)
+            {
+                AreaRegistration.RegisterAllAreas();
+                RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+                BundleConfig.RegisterBundles(BundleTable.Bundles);
+            }
         }
     }
 }

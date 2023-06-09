@@ -1,4 +1,4 @@
-﻿
+﻿@model eUseControl.Web.Models.UserData
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "blogsingle";
@@ -34,7 +34,6 @@
 
 
         @Html.Partial("_BlogContent")
-        @Html.Partial("_Footer")
     </div>
 
     @System.Web.Optimization.Scripts.Render("~/bundles/blogsingle/js")

@@ -1,4 +1,4 @@
-﻿
+﻿@model eUseControl.Web.Models.UserData
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "courses";
@@ -18,14 +18,12 @@
 </head>
 <body>
     <div class="super_container">
-        <div>
-
-        </div>
+        <div class="home"></div>
         @Html.Partial("_HomeCourses")
         @Html.Partial("_LanguageChoose")
         @Html.Partial("_CoursesListExtended")
         @Html.Partial("_InstructorsList")
-        @Html.Partial("_Footer")
+  
 
     </div>
 

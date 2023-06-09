@@ -1,4 +1,5 @@
-﻿
+﻿@model eUseControl.Web.Models.UserData
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "index";
@@ -8,13 +9,40 @@
 
 <body>
     <div class="super_container">
+        <div class="home">
+
+        </div>
         @Html.Partial("_Home")
         @Html.Partial("_LanguageChoose")
         @Html.Partial("_CoursesList")
         @Html.Partial("_InstructorsList")
         @Html.Partial("_RegisterForm")
         @Html.Partial("_OurBlog")
-        @Html.Partial("_Footer")
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>PRODUCT</tr>
+                        </thead>
+                        <tbody>
+
+
+            
+                            @foreach (var prod in Model.Products)
+                            {
+                                <tr>
+                                    <td>@prod</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
         @System.Web.Optimization.Scripts.Render("~/bundles/custom/js")
     </div>

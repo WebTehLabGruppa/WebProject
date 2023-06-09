@@ -2,28 +2,33 @@
 using eUseControl.BusinessLogic.Interfaces;
 using eUseControl.Domain.Entities.User;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography;
-using System.Web;
 using System.Web.Mvc;
-using eUseControl.Models;
+using eUseControl.Web.Models;
 using System.Web.UI.WebControls;
+using AutoMapper;
+using System.Web;
 
-namespace eUseControl.Controllers
+namespace eUseControl.Web.Controllers
 {
     public class LoginController : Controller
-    {
-        private readonly ISession _session;
-        public LoginController()
-        {
-            var bl =new BussinesLogic();
-            _session = bl.GetSessionBL();
-        }
+    { 
+            private readonly ISession _session;
+            private readonly IMapper _mapper;
+
+            public LoginController()
+            {
+                var bl = new BussinesLogic();
+                _session = bl.GetSessionBL();
+
+                // Инициализация конфигурации Automapper
+                var mapperConfig = new MapperConfiguration(cfg =>
+                {
+                    cfg.CreateMap<UserLogin, ULoginData>();
+                });
+                _mapper = mapperConfig.CreateMapper();
+            }
 
         // GET: Login
-
         [HttpGet]
         public ActionResult Index()
         {
@@ -33,7 +38,7 @@ namespace eUseControl.Controllers
         [HttpGet]
         public ActionResult SignIn()
         {
-            UserData u = new UserData();
+            UserLogin u = new UserLogin();
             ULoginData data = new ULoginData
             {
                 Credential = "Login123",
@@ -42,40 +47,48 @@ namespace eUseControl.Controllers
                 LoginDate = DateTime.Now
             };
             var userLogin = _session.UserLogin(data);
-            return View(u); 
+            return View(u);
         }
-
-
 
         [HttpPost]
-        public ActionResult SignIn(UserLogin login)
-        {
-            if (ModelState.IsValid)
+            [ValidateAntiForgeryToken]
+            public ActionResult SignIn(UserLogin login)
             {
-                ULoginData data = new ULoginData
+                if (ModelState.IsValid)
                 {
-                    Credential = login.Credential,
-                    Password = login.Password,
-                    LoginIp = Request.UserHostAddress,
-                    LoginDate = DateTime.Now
-                };
-                var userLogin = _session.UserLogin(data);
-                if (userLogin.Status)
-                {
-                    //add cookie
-                    return RedirectToAction("Index", "Home");
+                    var data = _mapper.Map<ULoginData>(login);
 
-                }
-                else
-                {
-                    ModelState.AddModelError("", userLogin.StatusMsg);
-                    return View();
+                    data.LoginIp = Request.UserHostAddress;
+                    data.LoginDate = DateTime.Now;
+
+                    var userLogin = _session.UserLogin(data);
+                    if (userLogin.Status)
+                    {
+                        HttpCookie cookie = _session.GenCookie(login.Credential);
+                        ControllerContext.HttpContext.Response.Cookies.Add(cookie);
+
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", userLogin.StatusMsg);
+                        return View();
+                    }
                 }
 
+                return View();
             }
-            return View();
         }
-
-
     }
-}
+
+
+        // GET: Login
+
+      
+
+    
+
+
+
+
+   

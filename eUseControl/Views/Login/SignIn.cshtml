@@ -1,23 +1,22 @@
-﻿
+﻿@using System.Web.Optimization
+@model eUseControl.Web.Models.UserLogin
 @{
     Layout = "";
     ViewBag.Title = "SignIn";
 }
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <title>Instructors</title>
     <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Lingua project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eUseSystem | @ViewBag.Title</title>
 
-    @System.Web.Optimization.Styles.Render("~/bundles/loginform/css")
-  
+@System.Web.Optimization.Styles.Render("~/bundles/loginform/css")
 </head>
-<html>
 
 <body>
-
     <div class="super_container">
         <div class="home">
 
@@ -25,7 +24,5 @@
         @Html.Partial("_LoginForm")
 
     </div>
-
-
 </body>
 </html>
