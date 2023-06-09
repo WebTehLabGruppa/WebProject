@@ -4,7 +4,6 @@ using eUseControl.Domain.Entities.User;
 using System;
 using System.Web.Mvc;
 using eUseControl.Web.Models;
-using System.Web.UI.WebControls;
 using AutoMapper;
 using System.Web;
 
