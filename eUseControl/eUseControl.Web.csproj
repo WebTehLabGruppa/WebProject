@@ -423,7 +423,6 @@
     <Content Include="Views\Home\Instructors.cshtml" />
     <Content Include="Views\Shared\_Video.cshtml" />
     <Content Include="Views\Shared\_Instructors.cshtml" />
-    <Content Include="Views\Shared\_TopTeachers.cshtml" />
     <Content Include="Views\Home\contact.cshtml" />
     <Content Include="Views\Shared\_ContactMap.cshtml" />
     <Content Include="Views\Home\courseenglish.cshtml" />
